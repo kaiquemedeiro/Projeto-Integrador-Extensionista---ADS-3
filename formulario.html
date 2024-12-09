@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Cadastro de Livros</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho com título e subtítulo -->
+    <div>
+        <h1 id="titulo">Cadastro de Livros</h1>
+        <p id="subtitulo">Complete os campos com as informações do livro</p>
+        <br>
+    </div>
+
+    <!-- Início do formulário -->
+    <form method="POST" action="cadastra_livro.php">
+
+        <fieldset class="grupo">
+            <!-- Campo do título do livro -->
+            <div class="campo">
+                <label for="titulo"><strong>Título do Livro</strong></label>
+                <input type="text" name="titulo" id="titulo" required>
+            </div>
+
+            <!-- Campo do autor -->
+            <div class="campo">
+                <label for="autor"><strong>Autor</strong></label>
+                <input type="text" name="autor" id="autor" required>
+            </div>
+        </fieldset>
+
+        <!-- Campo do gênero -->
+        <div class="campo">
+            <label for="genero"><strong>Gênero</strong></label>
+            <select id="genero" name="genero" required>
+                <option selected disabled value="">Selecione</option>
+                <option>Ficção</option>
+                <option>Romance</option>
+                <option>Terror</option>
+                <option>Fantasia</option>
+                <option>Biografia</option>
+                <option>História</option>
+                <option>Outro</option>
+            </select>
+        </div>
+
+        <!-- Campo do ano de publicação -->
+        <div class="campo">
+            <label for="ano_publicacao"><strong>Ano de Publicação</strong></label>
+            <input type="number" name="ano_publicacao" id="ano_publicacao" min="1000" max="9999" required>
+        </div>
+
+        <!-- Campo de status de leitura -->
+        <div class="campo">
+            <label><strong>Status de Leitura</strong></label>
+            <label>
+                <input type="radio" name="status_leitura" value="lido" required>Lido
+            </label>
+            <label>
+                <input type="radio" name="status_leitura" value="lendo">Lendo
+            </label>
+            <label>
+                <input type="radio" name="status_leitura" value="nao_lido">Não Lido
+            </label>
+        </div>
+
+        <!-- Campo de descrição -->
+        <div class="campo">
+            <br>
+            <label for="descricao"><strong>Descrição</strong></label>
+            <textarea rows="6" style="width: 26em" id="descricao" name="descricao"></textarea>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit">Concluído</button>
+
+    </form>
+
+</body>
+
+</html>

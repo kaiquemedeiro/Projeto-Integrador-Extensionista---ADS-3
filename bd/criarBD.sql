@@ -1,0 +1,14 @@
+CREATE TABLE `livro` (
+  `id_livro` int(11) NOT NULL,
+  `TITULO` varchar(100) NOT NULL,
+  `AUTOR` varchar(50) NOT NULL,
+  `GENERO` varchar(30) DEFAULT NULL,
+  `ANO_PUBLICACAO` year DEFAULT NULL,
+  `DESCRICAO` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `livro`
+  ADD PRIMARY KEY (`id_livro`);
+
+ALTER TABLE `livro`
+  MODIFY `id_livro` int(11) NOT NULL AUTO_INCREMENT;
